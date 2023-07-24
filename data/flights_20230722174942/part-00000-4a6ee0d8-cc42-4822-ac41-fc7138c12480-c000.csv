@@ -1,0 +1,10 @@
+flight_id,flight_on_ground,airline_name,airline_icao,airport_origin_name,airport_origin_icao,airport_destination_name,airport_destination_icao,airport_origin_continent,airport_destination_continent,distance_between_airports,aircraft_model,aircraft_manufacturer
+3138f229,0,Private owner,,,,,,,,,Balloon,
+3138fe57,0,,,,,,,,,,,
+31390118,0,,,,,,,,,,,
+31390176,0,,,,,,,,,,,
+31390324,0,,,,,,,,,,,
+313bffaf,0,,,,,,,,,,,
+313d5581,0,,,,,,,,,,,
+313dfd5c,0,American Airlines,AAL,Dallas Fort Worth International Airport,KDFW,Bakersfield Meadows Field Airport,KBFL,America,America,2041.0901642654483,Airbus A319-132,
+313e9b10,0,Air New Zealand,ANZ,Shanghai Pudong International Airport,ZSPD,Auckland Airport,NZAA,Asia,Pacific,9368.619826050155,Boeing 787-9 Dreamliner,

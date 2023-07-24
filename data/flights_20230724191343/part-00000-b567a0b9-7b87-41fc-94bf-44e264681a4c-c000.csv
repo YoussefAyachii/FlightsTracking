@@ -1,0 +1,10 @@
+flight_id,flight_on_ground,airline_name,airline_icao,airport_origin_name,airport_origin_icao,airport_destination_name,airport_destination_icao,airport_origin_continent,airport_destination_continent,distance_between_airports,aircraft_model,aircraft_manufacturer
+3138f229,0,Private owner,,,,,,,,,Balloon,
+3138fe57,0,,,,,,,,,,,
+313d5581,0,,,,,,,,,,,
+313f25bf,0,Private owner,,,,,,,,,Piper PA-25-235,
+31428ab4,0,,,,,,,,,,,
+3144a979,0,,,,,,,,,,,
+31455317,0,Maverick Helicopters,,,,,,,,,Airbus Helicopters H130,
+3145d7f3,1,Delta Air Lines (The Delta Spirit Sticker),DAL,Atlanta Hartsfield-Jackson International Airport,KATL,Tokyo Haneda International Airport,RJTT,America,Asia,11053.703843410563,Airbus A350-941,
+3145deef,0,Qantas,QFA,New York John F. Kennedy International Airport,KJFK,Auckland Airport,NZAA,America,Pacific,14215.148251037195,Boeing 787-9 Dreamliner,

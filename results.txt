@@ -1,0 +1,19 @@
+=== Résultats répondant aux énoncés du README.md === 
+
+Le présent fichier a été généré par l'exécution du fichier code/main.py.
+
+1. La compagnie avec le + de vols en cours est Qantas avec 1 vols en cours.
+
+2. Par manque de donnés, nous ne pouvons pas déterminer la compagnie avec le + de vols régionaux actifs.
+
+3. Le vol en cours avec le trajet le plus long est le vol 3145deef de l'airline Qantas qui part de 
+ New York John F. Kennedy International Airport à Auckland Airport. La distance entre les deux aéroports est de 14215.148251037195.
+
+4. Longueur moyenne de vol pour chaque continent:
+|continent|avg_flight_distance|
+
+5. L'entreprise constructeur d'avions avec le plus de vols actifs est None avec 8 vols actifs.
+
+Bonus. L'aéroport avec la plus grande différence entre le nombre de vols sortants et le nombre de vols entrants 
+ est Auckland Airport avec une différence absolue de 1.
+

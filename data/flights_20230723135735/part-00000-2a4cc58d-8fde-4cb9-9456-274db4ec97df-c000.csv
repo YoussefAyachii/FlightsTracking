@@ -1,0 +1,10 @@
+flight_id,flight_on_ground,airline_name,airline_icao,airport_origin_name,airport_origin_icao,airport_destination_name,airport_destination_icao,airport_origin_continent,airport_destination_continent,distance_between_airports,aircraft_model,aircraft_manufacturer
+3138f229,0,Private owner,,,,,,,,,Balloon,
+3138fe57,0,,,,,,,,,,,
+313d5581,0,,,,,,,,,,,
+313f25bf,0,Private owner,,,,,,,,,Piper PA-25-235,
+31407c28,1,,,,,,,,,,,
+3140b8b7,1,FedEx,FDX,Seattle Tacoma International Airport,KSEA,Oakland International Airport,KOAK,America,America,1081.610599321492,McDonnell Douglas MD-11F,
+31412919,0,,,,,,,,,,,
+3141bbf0,1,FedEx,,,,,,,,,Boeing 767-3S2F,
+3141ed0d,0,Swiss,SWR,Geneva International Airport,LSGG,London Heathrow Airport,EGLL,Europe,Europe,754.4538626612223,Airbus A220-300,
