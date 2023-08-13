@@ -1,4 +1,4 @@
-"""Extract: Extract data with the FlightRadar24API"""
+"""Extract data from the FlightRadar24API"""
 
 import pandas as pd
 from FlightRadar24 import FlightRadar24API

@@ -1,4 +1,5 @@
-"""Defining queries and methods to execute them within a spark session"""
+"""Defining queries and methods to execute them within a spark session
+in the main.py script."""
 
 
 from pyspark.sql import SparkSession
@@ -40,7 +41,11 @@ class FlightQueries:
         self. current_flight_with_longest_trip_query = f"""
         SELECT flight_id, airline_name, airport_origin_name, airport_destination_name, distance_between_airports
             FROM flights_tab
-            WHERE COALESCE (flight_id, airline_name, airport_origin_name, airport_destination_name, distance_between_airports) IS NOT NULL
+            WHERE flight_id IS NOT NULL
+            AND airline_name IS NOT NULL
+            AND airport_origin_name IS NOT NULL
+            AND airport_destination_name IS NOT NULL
+            AND distance_between_airports IS NOT NULL
             ORDER BY distance_between_airports DESC
             LIMIT 1
         """

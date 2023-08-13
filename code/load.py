@@ -1,4 +1,4 @@
-"""Load: Save data as csv after Extract and Transform steps"""
+"""Load after Extract and Transform steps"""
 
 import os
 from datetime import datetime
@@ -17,7 +17,9 @@ class NowFlightsDataFrame():
 
         # Create a Spark session
         self.spark_session = spark_session
+        # Get transformed DataFrame
         self.now_flights_df = FlightTransformer(self.spark_session, self.flight_tracker_limit).build_dataframe()
+        # Date and time of the extraction of data from the API
         self.date_dict, self.paths_dict = now_flights_date_and_paths_dicts()
 
         # save data
@@ -30,5 +32,5 @@ class NowFlightsDataFrame():
             .withColumn("tech_day", lit(self.date_dict['day']))
 
         # Save dataframe
-        data_with_partition_cols.write.partitionBy(["tech_year", "tech_month", "tech_day"]) \
+        data_with_partition_cols.write \
             .parquet(f"{self.paths_dict['dir_path']}/{self.paths_dict['partitioning']}/{self.paths_dict['file_name']}")

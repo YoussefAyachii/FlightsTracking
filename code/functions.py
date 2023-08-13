@@ -152,12 +152,12 @@ def now_flights_date_and_paths_dicts():
     year = now.strftime('%Y')
     month = now.strftime('%Y-%m')
     day = now.strftime('%Y-%m-%d')
-    timestamp = now.strftime('%Y.%m.%d.%H.%M.%S.%f')
+    timestamp = now.strftime('%Y_%m_%d_%H_%M_%S_%f')
     date_dict = {"year":year, "month":month, "day":day}
     
     # Paths 
     dir_path = "data/Flights/processed_data"
-    partitioning = f"{{tech_year}}/{{tech_month}}/{{tech_day}}"
+    partitioning = f"tech_year={year}/tech_month={month}/tech_day={day}"
     file_name = f"flights{timestamp}.parquet"
     paths_dict = {"dir_path":dir_path, "partitioning":partitioning, "file_name":file_name}
     

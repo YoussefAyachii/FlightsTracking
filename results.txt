@@ -2,12 +2,11 @@
 
 Le présent fichier a été généré par l'exécution du fichier code/main.py.
 
-1. La compagnie avec le + de vols en cours est Singapore Airlines avec 1 vols en cours.
+1. La compagnie avec le + de vols en cours est Invalid transponder code avec 1 vols en cours.
 
 2. Par manque de donnés, nous ne pouvons pas déterminer la compagnie avec le + de vols régionaux actifs.
 
-3. Le vol en cours avec le trajet le plus long est le vol 3138fe57 de l'airline None qui part de 
- None à None. La distance entre les deux aéroports est de None.
+3. Par manque de donnés, nous ne pouvons pas déterminer le vol en cours avec le trajet le plus long.
 
 4. Longueur moyenne de vol pour chaque continent:
 |continent|avg_flight_distance|

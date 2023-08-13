@@ -1,3 +1,5 @@
+"""When executed as __main__, generate a the results.txt doc"""
+
 from pyspark.sql import SparkSession
 
 from queries import FlightQueries
