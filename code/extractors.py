@@ -5,9 +5,8 @@ from FlightRadar24 import FlightRadar24API
 from functions import value_or_none_in_list
 
 class FlightExtractor:
-    def __init__(self, flight_tracker_limit=11):
+    def __init__(self, flight_tracker_limit):
         self.flight_tracker_limit = flight_tracker_limit
-        pass
 
     def setting_flight_tracker_config(self):
         fr_api = FlightRadar24API()

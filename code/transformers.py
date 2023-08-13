@@ -8,12 +8,16 @@ from extractors import FlightExtractor
 
 
 class FlightTransformer:
-    def __init__(self):
-        self.spark_session = SparkSession.builder.appName("spark_app").getOrCreate()
+    def __init__(self, spark_session, flight_tracker_limit):
+        self.spark_session = spark_session
+
+        # limit of nb flights to return (due to FlightTrackerAPI constraints)
+        self.flight_tracker_limit = flight_tracker_limit
+
 
     def build_dataframe(self):
         # Extract data using the FlightExtractor class
-        flight_extractor = FlightExtractor()
+        flight_extractor = FlightExtractor(self.flight_tracker_limit)
         current_flights_data_df = flight_extractor.extract_all_info_df()
 
         # Define table schema
