@@ -1,7 +1,11 @@
-import datetime
+"""Functions needed in different files of the project"""
+
+import os
+from datetime import datetime
 from FlightRadar24 import FlightRadar24API
 
 
+# Extract: determine the distance between two airports
 def distance_between_airports(origin_airport_icao=None, destination_airport_icao=None):
     """
     Calculate the distance between two airports using their ICAO codes.
@@ -29,6 +33,7 @@ def distance_between_airports(origin_airport_icao=None, destination_airport_icao
         return None
 
 
+# Extract: determine the continent of a given airport_icao
 def continent_of_airport(airport_icao=None):
     """
     Get the continent of the airport using its ICAO code.
@@ -52,7 +57,7 @@ def continent_of_airport(airport_icao=None):
         return None
 
 
-# 'N/A' replaced by None
+# Data Cleaning: 'N/A' replaced by None
 def value_or_none(value):
     """
     Convert a given value to None if it is equal to 'N/A' or None.
@@ -69,6 +74,29 @@ def value_or_none(value):
         return value
 
 
+# Data Cleaning: 'N/A' replaced by None inside a list 
+def value_or_none_in_list(list_elements):
+    """
+    Convert a given value in a list to None if it is equal to 'N/A' or None.
+
+    Parameters:
+        value (any): The value to check.
+
+    Returns:
+        any: The original value if it is different from 'N/A' and None, otherwise returns None.
+    """
+    
+    new_list = []
+    for element in list_elements:
+        if element == 'N/A' or element == None:
+            new_list.append(None)
+        else:
+            new_list.append(element)
+    
+    return new_list
+
+
+# Load: Time 
 def get_current_time():
     """
     Get the current time and return it as a formatted string.
@@ -81,6 +109,13 @@ def get_current_time():
     return formatted_time
 
 
+# Load: Save dataframe as csv
+def save_dataframe_to_csv(data_df, output_path):
+    # Save the DataFrame to a CSV file
+    data_df.write.csv(output_path, header=True, mode="overwrite")
+
+
+# Report Generation
 def write_row_by_row_tab(file_obj, col1, col2, col1_name, col2_name):
     """
     Writes a table with two columns, row by row, into the specified file object.
@@ -109,3 +144,21 @@ def write_row_by_row_tab(file_obj, col1, col2, col1_name, col2_name):
         tmp_col1_value = col1[i]
         tmp_col2_value = col2[i]
         file_obj.write(f"| {tmp_col1_value} | {tmp_col2_value} | \n")
+
+
+def now_flights_date_and_paths_dicts():
+    # Get time
+    now = datetime.now()
+    year = now.strftime('%Y')
+    month = now.strftime('%Y-%m')
+    day = now.strftime('%Y-%m-%d')
+    timestamp = now.strftime('%Y.%m.%d.%H.%M.%S.%f')
+    date_dict = {"year":year, "month":month, "day":day}
+    
+    # Paths 
+    dir_path = "data/Flights/processed_data"
+    partitioning = f"{{tech_year}}/{{tech_month}}/{{tech_day}}"
+    file_name = f"flights{timestamp}.parquet"
+    paths_dict = {"dir_path":dir_path, "partitioning":partitioning, "file_name":file_name}
+    
+    return date_dict, paths_dict
